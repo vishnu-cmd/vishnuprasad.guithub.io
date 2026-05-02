@@ -4,32 +4,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
+    <title>Developer Portfolio | Backend Engineer</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            text-align: center;
+        :root {
+            color-scheme: light;
+            background: #f5f7fb;
+            color: #111827;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
-        .status-badge {
-            background-color: #2da44e;
-            color: white;
-            padding: 5px 15px;
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 24px 20px 60px;
+        }
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: clamp(2.2rem, 3vw, 3.2rem);
+        }
+        header nav a {
+            margin-left: 18px;
+            color: #1f2937;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        header nav a:hover {
+            color: #2563eb;
+        }
+        .hero {
+            background: white;
+            border-radius: 24px;
+            padding: 36px 32px;
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+            margin-bottom: 32px;
+        }
+        .hero p {
+            margin: 16px 0 0;
+            max-width: 720px;
+            line-height: 1.8;
+            color: #4b5563;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #e0f2fe;
+            color: #0369a1;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        section h2 {
+            margin-bottom: 14px;
+            font-size: 1.65rem;
+        }
+        .cards {
+            display: grid;
+            gap: 18px;
+        }
+        .card {
+            background: white;
             border-radius: 20px;
-            display: inline-block;
-            font-weight: bold;
+            padding: 24px;
+            box-shadow: 0 14px 40px rgba(15, 23, 42, 0.07);
+        }
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .card p {
+            margin: 0;
+            color: #4b5563;
+            line-height: 1.75;
+        }
+        .blog-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .blog-list li {
+            background: white;
+            border-radius: 18px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        }
+        .blog-list li h3 {
+            margin: 0 0 8px;
+        }
+        .blog-list li p {
+            margin: 0;
+            color: #475569;
+        }
+        .contact-card {
+            display: grid;
+            gap: 16px;
+        }
+        .contact-item {
+            background: #eff6ff;
+            border-radius: 16px;
+            padding: 18px 20px;
+            color: #0f172a;
+        }
+        footer {
+            text-align: center;
+            padding-top: 16px;
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+        @media (min-width: 700px) {
+            .cards {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .contact-card {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
         }
     </style>
 </head>
 <body>
-    <h1>🚀 Hello, World!</h1>
-    <p class="status-badge">Success: Your GitHub Page is Live</p>
-    <p>If you can see this, your <strong>index.html</strong> file is configured correctly.</p>
-    <hr>
-    <p>Edit this file in your repository to start building your site.</p>
+    <div class="container">
+        <header>
+            <div>
+                <h1>Backend Developer Portfolio</h1>
+                <p style="color:#475569; margin:8px 0 0;">A practical developer page for backend work, AI exploration, and modern application design.</p>
+            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#blogs">Blogs</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <span class="badge">Backend Engineer</span>
+            <h2>Hi, I’m a backend developer focused on scalable systems, APIs, and practical AI-driven insights.</h2>
+            <p>Building clean server-side solutions with a strong interest in large language models (LLMs) and retrieval-augmented generation (RAG). This page is designed to introduce my background, expertise, and writing on AI topics.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="card">
+                <h3>Developer profile</h3>
+                <p>I specialize in backend development with experience in building REST APIs, microservices, database design, and server-side automation. I enjoy turning complex requirements into efficient, maintainable systems.</p>
+                <p>As a backend developer, I also explore AI concepts that can complement backend services, especially when applying LLMs and RAG to real-world applications.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Core Skills</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Backend Engineering</h3>
+                    <p>API development, authentication, service orchestration, database schema design, and performance optimization for reliable server-side applications.</p>
+                </div>
+                <div class="card">
+                    <h3>AI & LLM Exploration</h3>
+                    <p>Working with language models, prompt design, and retrieval-augmented generation to build intelligent assistants, search tools, and data-driven workflows.</p>
+                </div>
+                <div class="card">
+                    <h3>DevOps & Deployment</h3>
+                    <p>Hands-on with CI/CD pipelines, cloud deployment, and infrastructure automation to keep applications available, secure, and easy to maintain.</p>
+                </div>
+                <div class="card">
+                    <h3>Modern Web Practices</h3>
+                    <p>Clean documentation, modular architecture, performance-aware design, and developer-friendly tooling for faster iteration and strong delivery.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="blogs">
+            <h2>Blog Highlights</h2>
+            <ul class="blog-list">
+                <li>
+                    <h3>Understanding LLMs for Backend Developers</h3>
+                    <p>Explore how large language models can be integrated with backend systems, from prompt handling to safe output processing and practical use cases.</p>
+                </li>
+                <li>
+                    <h3>What is Retrieval-Augmented Generation (RAG)?</h3>
+                    <p>Learn why RAG helps make LLM responses more accurate by combining search/retrieval with generation, and how it fits into data-rich applications.</p>
+                </li>
+                <li>
+                    <h3>Minimal AI Prototypes Without Heavy Infrastructure</h3>
+                    <p>A guide to building lightweight AI-enhanced services using free-tier APIs, local rule-based interactions, and smart caching for low-cost experiments.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-card">
+                <div class="contact-item">
+                    <strong>Email</strong>
+                    <p>yourname@example.com</p>
+                </div>
+                <div class="contact-item">
+                    <strong>Connect</strong>
+                    <p>GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">github.com/yourusername</a></p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            Built as a simple developer portfolio page for backend engineering and AI content.
+        </footer>
+    </div>
 </body>
 </html>
